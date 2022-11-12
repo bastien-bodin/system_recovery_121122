@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'exercice_feuille_style.blg'
+[43] biber:322> INFO - === jeu. mars 10, 2022, 18:26:07
+[53] Biber.pm:415> INFO - Reading 'exercice_feuille_style.bcf'
+[97] Biber.pm:943> INFO - Found 2 citekeys in bib section 0
+[106] Biber.pm:4256> INFO - Processing section 0
+[106] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
+[107] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
+[114] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[114] bibtex.pm:1653> INFO - LaTeX decoding ...
+[117] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
+[140] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[140] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[140] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'fr-FR'
+[140] Biber.pm:4090> INFO - No sort tailoring available for locale 'fr-FR'
+[142] bbl.pm:652> INFO - Writing 'exercice_feuille_style.bbl' with encoding 'UTF-8'
+[143] bbl.pm:755> INFO - Output to exercice_feuille_style.bbl

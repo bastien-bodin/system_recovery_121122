@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright} % police d'ecriture
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}[left=2.5cm, right=2.5cm, top=1.5cm, bottom=2cm]
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{array,multirow,makecell}
+\usepackage{hyperref}
+\usepackage[backend=biber,style=iso-authoryear]{biblatex} % norme iso 690
+\usepackage{csquotes}
+\addbibresource{bibliography.bib}
+
+%%% PAGE DE PRESENTATION
+
+\title{
+\hrule \vspace{11pt}
+{\textbf{MODÉLISATION, PAR LA MÉTHODE SPH, D'ÉCOULEMENTS LIQUIDES À LA SURFACE DE TITAN -- APPLICATION À D'AUTRES SATELLITES DE GLACE}}\\\vspace{11pt}
+\hrule}
+
+\makeatletter
+
+
+%\usepackage[toc,page]{appendix}
+%\usepackage{makeidx}
+
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+\titleformat{\chapter}
+	[display]
+	{\centering\normalfont\large\scshape\bfseries}
+	{}%\rule[3pt]{0.15\linewidth}{3pt}\quad\chaptertitlename~\thechapter\quad rule[3pt]{0.15\linewidth}{3pt}
+	{-7\baselineskip}
+	{\rule{\linewidth}{0.5pt}\break\Huge}
+	[\vspace{-0.5\baselineskip}\rule{\linewidth}{0.5pt}\vspace{0.1\baselineskip}]
+
+	% personnalisation sections
+\titleformat{\section}
+	[block]
+	{\Large\scshape\bfseries}
+	{\thesection}
+	{\baselineskip}
+	{}
+	[\hrule\vspace{2pt}\hrule\vspace{0.8\baselineskip}]
+
+	% personnalisation sous-section
+\titleformat{\subsection}
+	[block]
+	{\normalfont\large\bfseries}
+	{\thesubsection}
+	{\baselineskip}
+	{}
+	[\hrule\vspace{0.75\baselineskip}]
+
+	% personnalisation sous-sous-section
+\titleformat{\subsubsection}
+	[block]
+	{\itshape\normalsize\bfseries}
+	{\normalfont\bfseries \thesubsubsection}
+	{\baselineskip}
+	{}
+	[\vspace{0.5\baselineskip}]
+
+%%%% personnalisation table des matières
+
+\titlecontents{chapter}
+	[5pt]
+	{\addvspace{2pc}}
+	{\scshape\bfseries\large} % \contentslabel{50pt}   <- pour indiquer le numéro de chapitre dans la ToC
+	{}
+	{\hrule\vspace{2pt}\hrule}
+	[]
+
+	% personnalisation section
+\titlecontents{section}
+	[25pt]
+	{\addvspace{3pt}}
+	{\normalfont\scshape\contentslabel{20pt}}
+	{}
+	{\normalsize\dotfill\bfseries\thecontentspage}
+	[]
+
+	% personnalisation sous-section
+\titlecontents{subsection}
+	[75pt]
+	{}
+	{\small\contentslabel{30pt}}
+	{}
+	{\normalsize\dotfill\small\thecontentspage}
+	[]
+
+	% personnalisation sous-sous-section
+\titlecontents{subsubsection}
+	[125pt]
+	{}
+	{\normalfont\footnotesize\contentslabel{30pt}\itshape}
+	{}
+	{\normalsize\dotfill\footnotesize\itshape\thecontentspage}
+	[]
+
+\begin{document}
+\include{tex-files/0-titlepage}
+\setcounter{chapter}{-1}
+\include{tex-files/0-1-Acknowledgment}
+\setcounter{chapter}{-1}
+\include{tex-files/0-2-Summary}
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\include{tex-files/1-chapter1}
+
+\printbibliography
+\end{document}
